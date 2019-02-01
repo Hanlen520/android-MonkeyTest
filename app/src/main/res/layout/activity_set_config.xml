@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_common_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_HEIGHT_25_PX"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_25_PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试次数："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <EditText
+            android:id="@+id/times_et"
+            android:layout_width="@dimen/DIMEN_WIDTH_300_PX"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/DIMEN_HEIGHT_20_PX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_HEIGHT_25_PX"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_25_PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单次延迟："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <EditText
+            android:id="@+id/delay_et"
+            android:layout_width="@dimen/DIMEN_WIDTH_300_PX"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_HEIGHT_25_PX"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_25_PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="滑动事件百分比："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <EditText
+            android:id="@+id/motion_pct_et"
+            android:layout_width="@dimen/DIMEN_WIDTH_300_PX"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_HEIGHT_25_PX"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_25_PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="触摸事件百分比："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <EditText
+            android:id="@+id/touch_pct_et"
+            android:layout_width="@dimen/DIMEN_WIDTH_300_PX"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_HEIGHT_25_PX"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_25_PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统事件百分比："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <EditText
+            android:id="@+id/system_pct_et"
+            android:layout_width="@dimen/DIMEN_WIDTH_300_PX"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_HEIGHT_25_PX"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_25_PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity启动事件百分比："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <EditText
+            android:id="@+id/launch_pct_et"
+            android:layout_width="@dimen/DIMEN_WIDTH_300_PX"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIMEN_HEIGHT_20_PX"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出现异常停止："
+            android:textSize="@dimen/DIMEN_HEIGHT_24_PX" />
+
+        <Switch
+            android:id="@+id/stop_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+</LinearLayout>

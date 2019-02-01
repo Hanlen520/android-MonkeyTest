@@ -1,0 +1,5 @@
+ext {
+    VERSION_NAME = '1.1.3'
+    VERSION_CODE = 113
+}
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_package_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_theme"
+    android:orientation="vertical"
+    tools:context="com.eebbk.monkeytest.activity.PackageSelectActivity">
+
+    <include layout="@layout/include_common_title_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/app_info_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="请选择需要测试的app,需要有桌面图标"
+            android:textSize="@dimen/DIMEN_HEIGHT_20_PX"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_select_none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:onClick="tvSelectNone"
+            android:padding="4dp"
+            android:text="@string/select_none"
+            android:textSize="@dimen/DIMEN_TEXT_20_PX"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/gray_light">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/edt_search"
+                        android:imeOptions="actionGo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/DIMEN_HEIGHT_55_PX"
+                        android:layout_margin="@dimen/DIMEN_TEXT_5_PX"
+                        android:background="@drawable/shape_corner_bg_white"
+                        android:gravity="center_vertical"
+                        android:hint="输入APP名/包名"
+                        android:lines="1"
+                        android:inputType="text"
+                        android:padding="@dimen/DIMEN_TEXT_10_PX"
+                        android:textSize="@dimen/DIMEN_TEXT_23_PX" />
+
+                    <ImageView
+                        android:layout_width="@dimen/DIMEN_WIDTH_35_PX"
+                        android:layout_height="@dimen/DIMEN_HEIGHT_35_PX"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/DIMEN_WIDTH_20_PX"
+                        android:onClick="onIvBtnClearText"
+                        android:src="@drawable/ico_del" />
+                </FrameLayout>
+
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="@dimen/DIMEN_WIDTH_100_PX"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/DIMEN_TEXT_5_PX"
+                    android:onClick="onBtnSearchClick"
+                    android:text="@android:string/search_go"
+                    android:textSize="@dimen/DIMEN_TEXT_25_PX" />
+            </LinearLayout>
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_ps"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ListView
+                    android:id="@+id/package_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fastScrollEnabled="true"
+                    android:fastScrollAlwaysVisible="true"
+                    tools:listitem="@layout/package_list_item" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_btn_search"
+            android:layout_width="@dimen/DIMEN_WIDTH_80_PX"
+            android:layout_height="@dimen/DIMEN_HEIGHT_80_PX"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="@dimen/DIMEN_TEXT_40_PX"
+            android:layout_marginEnd="@dimen/DIMEN_TEXT_90_PX"
+            android:alpha="0.8"
+            android:onClick="onFloatBtnToSearch"
+            android:src="@android:drawable/ic_menu_search"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </FrameLayout>
+
+
+</LinearLayout>

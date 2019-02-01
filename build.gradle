@@ -1,0 +1,23 @@
+apply from: "http://172.28.2.93/bfc/Bfc/raw/master/public-config/newbfc-config.gradle"
+apply from: "config.gradle"
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url bfcBuildConfig.MAVEN_URL }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

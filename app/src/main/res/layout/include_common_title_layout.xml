@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/DIMEN_WIDTH_110_PX"
+    android:background="@color/black"
+    >
+<FrameLayout
+android:alpha="0.85"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/month_title_bar_bg"></FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_WIDTH_70_PX"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/iv_title_back"
+            android:layout_width="@dimen/DIMEN_WIDTH_45_PX"
+            android:layout_height="@dimen/DIMEN_HEIGHT_45_PX"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/DIMEN_WIDTH_15_PX"
+            android:src="@mipmap/back_n"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/date_ui_white"
+            android:textSize="@dimen/DIMEN_TEXT_25_PX"
+            tools:text="选择应用" />
+
+        <TextView
+            android:id="@+id/iv_title_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/DIMEN_WIDTH_20_PX"
+            android:text="@string/sure"
+            android:textColor="@color/date_ui_white"
+            android:textSize="@dimen/DIMEN_TEXT_25_PX"
+            android:visibility="invisible" />
+
+        <TextView
+            android:clickable="true"
+            android:padding="@dimen/DIMEN_TEXT_5_PX"
+            android:id="@+id/iv_title_extra_fun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/DIMEN_WIDTH_20_PX"
+            android:text="@string/extra_function"
+            android:textColor="@color/date_ui_white"
+            android:textSize="@dimen/DIMEN_TEXT_25_PX"
+            android:visibility="gone" />
+    </RelativeLayout>
+</FrameLayout>

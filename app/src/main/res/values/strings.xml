@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Monkey测试</string>
+    <string name="app_version_name">版本名</string>
+    <string name="app_version_code">版本号</string>
+    <string name="app_detect_result_detecting">小伙子，等等，结果马上出来</string>
+    <string name="app_detect_result_error">小伙子，有异常，好好看看吧</string>
+    <string name="app_detect_result_succeed">小伙子，表现还不错，本次无异常</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="config_change">修改</string>
+    <string name="extra_function">扩展功能</string>
+    <string name="select_none">全不选</string>
+    <string name="text_ok">确定</string>
+    <string name="text_hint">提示</string>
+</resources>
